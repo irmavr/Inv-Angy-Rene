@@ -20,20 +20,32 @@
             z-index: 999;
             left: 0; top: 0;
             width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .modal-content {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			background: white;
+			padding: 18px 24px;           /* ↓ Menos espacio interior */
+			border-radius: 12px;
+			text-align: center;
+			box-shadow: 0 0 10px rgba(0,0,0,0.25);
 			position: relative;
-			top: -220px; /* súbela para que no tape la imagen */
+			top: -260px;                 /* ✔️ Mantiene la posición elevada */
+			max-width: 280px;
+			margin: auto;
         }
+		.modal-content h2 {
+			margin-bottom: 8px;
+			font-size: 22px;
+		}
+
+		.modal-content p {
+			margin: 0 0 14px 0;
+			font-size: 14px;
+			color: #666;
+		}
         button {
             padding: 10px 20px;
             background-color: #f9d1c9;
@@ -96,28 +108,30 @@
 		  margin-top: 5px;
 		  color: #777;
 		}
-				#cintillo {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            color: white;
-            padding: 12px 20px;
-            font-family: 'Georgia', serif;
-            font-size: 17px;
-            letter-spacing: 1px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-            opacity: 1;
-            transition: opacity 0.5s ease;
-        }
+			#cintillo {
+			width: 100%;
+			background-color: rgba(255, 230, 236, 0.95);  /* rosa muy suave */
+			color: #b85c7c; /* rosa fuerte para el texto */
+			padding: 12px 20px;
+			font-family: 'Georgia', serif;
+			font-size: 17px;
+			letter-spacing: 1px;
+			text-align: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+			opacity: 1;
+			transition: opacity 0.5s ease;
+		}
 		
 		.contador-estilo h2 {
-			font-size: 30px;
+			font-size: 33px;
 			color: #f9d1c9;
 			font-family: 'Allura', serif;
+			text-align: 'center'
+			padding: 12px 20px;
 		}
 		.countdown-box {
 			display: flex;
@@ -171,25 +185,31 @@
 
 <div class="modal" id="welcomeModal">
     <div class="modal-content">
-        <h2>Angy y René</h2>
+        <h2>Angy &  René</h2>
         <p>Nos Casamos</p>
         <img src="boton_aceptar.png" alt="Acompáñanos" id="botonAceptar" style="
             cursor: pointer;
-            width: 180px;
+            width: 130px;
             margin-top: 20px;
             transition: transform 0.2s ease;
-        " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1.2)'">
     </div>
 </div>
 
 <div class="content" id="mainContent" style="display: none;">
     <div class="section">
-        <img src="1.gif" alt="Angy y René" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-top: 20px;">
-    </div>
+		<img src="1.gif" alt="Angy y René" style="
+			max-width: 100%;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+			margin: 1px auto 0 auto;  /* menos espacio arriba */
+			display: block;
+		">
+	</div>
 
     <div class="section contador-estilo">
-		<h2>Dios unió nuestros caminos</h2>
-		<h2>Ahora iremos a su casa para bendecir nuestro amor.</h2>
+		<h2>Dios unió nuestros caminos. Ahora iremos a su casa para bendecir nuestro amor.</h2>
 		
 		<!--<div class="decoracion"><img src="decoracion.png" alt="decoración" style="max-width: 180px; margin: 10px auto;"></div>-->
 		<div class="decoracion">
@@ -198,7 +218,17 @@
 
 		<div id="countdown" class="countdown-box"></div>
 	</div>
-
+	<!--INVITADOS-->
+	<div class="section" id="invitadoEspecial" style="display: none;">
+	  <h2 style="color: #c76b8c;">Invitado Especial</h2>
+	  <p id="nombreInvitado" style="font-size: 20px; font-weight: bold; color: #7a7a7a;"></p>
+	</div>
+<!-- *******************-->
+	<div class="section">
+	  <img src="Itinerario.png" alt="Itinerario de la boda" style="
+		max-width: 100%;
+		 ">
+	</div>
     <div class="section">
         <h2>Ceremonia</h2>
         <p>Rectoría de la Divina Providencia</p>
@@ -302,6 +332,32 @@ setInterval(() => {
         <div class="countdown-item"><div class="number">${String(secs).padStart(2, '0')}</div><div class="label">Segs</div></div>
     `;
 }, 1000);
+</script>
+<script>
+function getParametro(nombre) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(nombre);
+}
+
+async function mostrarInvitado() {
+    const clave = getParametro("invitado");
+    if (!clave) return;
+
+    try {
+        const response = await fetch('invitados.json');
+        const invitados = await response.json();
+        const persona = invitados.find(p => p.clave === clave.toLowerCase());
+
+        if (persona) {
+            document.getElementById('invitadoEspecial').style.display = 'block';
+            document.getElementById('nombreInvitado').innerText = persona.nombre + " 💖";
+        }
+    } catch (error) {
+        console.error("Error cargando invitados:", error);
+    }
+}
+
+mostrarInvitado();
 </script>
 </body>
 </html>
