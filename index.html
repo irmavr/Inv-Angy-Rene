@@ -10,231 +10,227 @@
 	<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            font-family: 'Georgia', serif;
-            background-color: #fff9f9;
-            color: #5e5e5e;
-            overflow-x: hidden;
-        }
-	mainContent {
-	 max-width: 960px;
-    	 margin: 0 auto;
-    	 padding: 0 10px;
-    	 text-align: center;
-    	 box-sizing: border-box;
-	}	    
-        .modal {
-            position: fixed;
-            z-index: 999;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .modal-content {
-			background: white;
-			padding: 18px 24px;           /* ↓ Menos espacio interior */
-			border-radius: 12px;
-			text-align: center;
-			box-shadow: 0 0 10px rgba(0,0,0,0.25);
-			position: relative;
-			top: -200px;                 /* ✔️ Mantiene la posición elevada */
-			max-width: 280px;
-			margin: auto;
-        }
-		.modal-content h2 {
-			margin-bottom: 8px;
-			font-size: 22px;
-		}
+        margin: 0;
+        font-family: 'Georgia', serif;
+        background-color: #fff9f9;
+        color: #5e5e5e;
+        overflow-x: hidden;
+    }
 
-		.modal-content p {
-			margin: 0 0 14px 0;
-			font-size: 14px;
-			color: #666;
-		}
-        button {
-            padding: 10px 20px;
-            background-color: #f9d1c9;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-	.contenedor-principal {
-	  max-width: 960px;
-	  margin: 0 auto;
-	  padding: 0 15px;
-	  box-sizing: border-box;
-	}	    
-	.section {
-	    max-width: 8000px;              /* más espacio en pantallas grandes */
-	    margin: 40px auto 20px auto;   /* centrado automático */
-	    padding: 0 20px;               /* espacio interior responsivo */
-	    text-align: center;           /* centra texto e imágenes */
-	    box-sizing: border-box;       /* asegura que padding no desborde */
-	}
-        .section h2 {
-            color: #c76b8c;
-        }
-  	.section h1 {
-            color: #c76b8c;
-        }	    
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-        }
-        .whatsapp-float img {
-            width: 60px;
-            height: 60px;
-        }
-        #countdown {
-            font-size: 24px;
-            color: #7a7a7a;
-            margin-top: 10px;
-        }
-		.countdown-box {
-		  display: flex;
-		  justify-content: center;
-		  gap: 25px;
-		  margin-top: 20px;
-		  font-family: 'Georgia', serif;
-		}
+    #mainContent {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
 
-		.countdown-item {
-		  text-align: center;
-		  color: #5e5e5e;
-		}
+    .modal {
+        position: fixed;
+        z-index: 999;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-		.countdown-item .number {
-		  font-size: 40px;
-		  font-weight: bold;
-		  color: #f9d1c9; /* Verde suave o el que tú elijas */
-		  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-		}
+    .modal-content {
+        background: white;
+        padding: 18px 24px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+        position: relative;
+        top: -200px;
+        max-width: 280px;
+        margin: auto;
+    }
 
-		.countdown-item .label {
-		  font-size: 14px;
-		  margin-top: 5px;
-		  color: #777;
-		}
-			#cintillo {
-			width: 100%;
-			background-color: rgba(255, 230, 236, 0.95);  /* rosa muy suave */
-			color: #b85c7c; /* rosa fuerte para el texto */
-			padding: 12px 20px;
-			font-family: 'Georgia', serif;
-			font-size: 17px;
-			letter-spacing: 1px;
-			text-align: center;
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 1000;
-			box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-			opacity: 1;
-			transition: opacity 0.5s ease;
-		}
-		
-		.contador-estilo h2 {
-			font-size: 33px;
-			color: #f9d1c9;
-			font-family: 'Allura', serif;
-			text-align: 'center'
-			padding: 12px 20px;
-		}
-		.countdown-box {
-			display: flex;
-			justify-content: center;
-			gap: 25px;
-			margin-top: 20px;
-			font-family: 'Great Vibes', serif;
-		}
-		.countdown-item {
-			text-align: center;
-		}
-		.countdown-item .number {
-			font-size: 38px;
-			font-weight: bold;
-			color: #e9a8b0;
-		}
-		.countdown-item .label {
-			font-size: 14px;
-			color: #a88c94;
-		}
-		.decoracion {
-		  display: flex;
-		  justify-content: center;
-		  align-items: center;
-		  margin: 20px 0;
-		}
-		.decoracion img {
-		  max-width: 200px;
-		  margin: 0 auto;
-		  display: block;
-		}
-	    .titulo-invitado {
-	    font-family: 'Parisienne', cursive;
-	    font-size: 38px;
-	    color: #c76b8c;
-	    margin-bottom: 10px;
-	}
-	
-	.nombre-invitado {
-	    font-size: 26px;
-	    font-weight: bold;
-	    color: #7a7a7a;
-	    margin-bottom: 5px;
-	}
-	.contenedor-invitado {
-	  position: relative;
-	  max-width: 600px;     /* Esto limita el ancho para que no se vea enorme */
-	  margin: 60px auto 40px auto;
-	  padding: 0 10px;
-	  text-align: center;
-	}
-	
-	.contenedor-invitado img {
-	  width: 100%;
-	  height: auto;
-	  display: block;
-	  margin: 0 auto;
-	}
-	.texto-sobrepuesto {
-	  position: absolute;
-	  top: 70%; /* 52✔ ajusta la altura */
-	  left: 50%;
-	  transform: translate(-50%, -50%);
-	  color: #7a7a7a;
-	  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
-	  line-height: 1.4;
-	  width: 90%;
-	}
-	
-	.texto-sobrepuesto h1 {
-	    font-size: 22px;
-	    font-weight: bold;
-	    margin: 0;
-	}
-	
-	.texto-sobrepuesto p {
-	    font-size: 12px;
-	    letter-spacing: 1px;
-	    margin: 6px 0 0 0;
-	}
-	.texto-sobrepuesto h3 {
-	    font-size:20px;
-	    font-weight: bold;
-	    margin-bottom: 10px;
-	}
+    .modal-content h2 {
+        margin-bottom: 8px;
+        font-size: 22px;
+    }
+
+    .modal-content p {
+        margin: 0 0 14px 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #f9d1c9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .contenedor-principal {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .section {
+        max-width: 960px;
+        margin: 40px auto 20px auto;
+        padding: 0 20px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .section h2,
+    .section h1 {
+        color: #c76b8c;
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    .whatsapp-float img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #countdown {
+        font-size: 24px;
+        color: #7a7a7a;
+        margin-top: 10px;
+    }
+
+    .countdown-box {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 20px;
+        font-family: 'Georgia', serif;
+    }
+
+    .countdown-item {
+        text-align: center;
+    }
+
+    .countdown-item .number {
+        font-size: 40px;
+        font-weight: bold;
+        color: #f9d1c9;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    }
+
+    .countdown-item .label {
+        font-size: 14px;
+        color: #777;
+    }
+
+    #cintillo {
+        width: 100%;
+        background-color: rgba(255, 230, 236, 0.95);
+        color: #b85c7c;
+        padding: 12px 20px;
+        font-family: 'Georgia', serif;
+        font-size: 17px;
+        letter-spacing: 1px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+
+    .contador-estilo h2 {
+        font-size: clamp(22px, 4vw, 33px);
+        color: #f9d1c9;
+        font-family: 'Allura', serif;
+        padding: 12px 20px;
+    }
+
+    .decoracion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .decoracion img {
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .titulo-invitado {
+        font-family: 'Parisienne', cursive;
+        font-size: 38px;
+        color: #c76b8c;
+        margin-bottom: 10px;
+    }
+
+    .nombre-invitado {
+        font-size: 26px;
+        font-weight: bold;
+        color: #7a7a7a;
+        margin-bottom: 5px;
+    }
+
+    .contenedor-invitado {
+        position: relative;
+        max-width: 600px;
+        margin: 60px auto 40px auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .contenedor-invitado img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .texto-sobrepuesto {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #7a7a7a;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+        line-height: 1.4;
+        width: 90%;
+    }
+
+    .texto-sobrepuesto h1 {
+        font-size: clamp(18px, 3vw, 28px);
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .texto-sobrepuesto h3 {
+        font-size: clamp(16px, 2.5vw, 22px);
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .texto-sobrepuesto p {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin: 6px 0 0 0;
+    }
     </style>
 </head>
 <body>
