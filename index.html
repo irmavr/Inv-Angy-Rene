@@ -60,12 +60,19 @@
             padding: 20px;
             text-align: center;
         }
-        .section {
-            max-width: 800px;
-            margin: 40px 10px 20px 10px;
-            padding: 0 20px;
-            text-align: center;
-        }
+	.contenedor-principal {
+	  max-width: 960px;
+	  margin: 0 auto;
+	  padding: 0 15px;
+	  box-sizing: border-box;
+	}	    
+	.section {
+	    max-width: 960px;              /* más espacio en pantallas grandes */
+	    margin: 40px auto 20px auto;   /* centrado automático */
+	    padding: 0 20px;               /* espacio interior responsivo */
+	    text-align: center;           /* centra texto e imágenes */
+	    box-sizing: border-box;       /* asegura que padding no desborde */
+	}
         .section h2 {
             color: #c76b8c;
         }
@@ -254,7 +261,8 @@
     </div>
 </div>
 
-<div class="content" id="mainContent" style="display: none;">
+<!--<div class="content" id="mainContent" style="display: none;">-->
+<div class="content contenedor-principal" id="mainContent">
     <div class="section">
 		<img src="1.gif" alt="Angy y René" style="
 			max-width: 100%;
