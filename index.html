@@ -179,7 +179,7 @@
 
     .titulo-invitado {
         font-family: 'Parisienne', cursive;
-        ont-size: clamp(22px, 4vw, 38px);
+        font-size: clamp(22px, 4vw, 38px);
         color: #c76b8c;
         margin-bottom: 10px;
     }
@@ -297,19 +297,20 @@
     <div class="modal-content">
         <h2>Angy &  René</h2>
         <p>Nos Casamos</p>
-        <img src="boton_aceptar.png" alt="Acompáñanos" id="botonAceptar" style="
+        <img src="boton_aceptar.png" alt="Acompáñanos" id="botonAceptar" aria-label="Abrir invitación"
+	  style="
             cursor: pointer;
             width: 130px;
             margin-top: 20px;
             transition: transform 0.2s ease;
-        " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1.2)'">
+        " onmouseover="this.style.transform='scale(1.0)'" onmouseout="this.style.transform='scale(1.2)'">
     </div>
 </div>
 
 <!--<div class="content" id="mainContent" style="display: none;">-->
 <div class="content contenedor-principal" id="mainContent" style="display: none;">
     <div class="section">
-		<img src="1.gif" alt="Angy y René" style="
+		<img src="1.gif" alt="Angy y René" aria-label="Imagen animada de Angy y René" style="
 			max-width: 100%;
 			height: auto;
 			border-radius: 10px;
@@ -370,7 +371,8 @@
 	  </h2>
 	  <div class="video-wrapper">
 	    <iframe src="https://www.youtube.com/embed/kPa7bsKwL-c?autoplay=0&rel=0"
-	      title="Die With A Smile"
+	      title="Nuestra canción especial: Die With A Smile"
+	      aria-label="Reproductor de video con nuestra canción especial"
 	      frameborder="0"
 	      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 	      allowfullscreen>
@@ -379,7 +381,7 @@
 	</div>	
 <!--*********-->
     <div class="section">
-        <a href="https://wa.me/525534127233?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Angy%20y%20René%20💕🎉" target="_blank">
+        <a href="https://wa.me/525534127233?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Angy%20y%20René%20💕🎉. Y ya llene los datos en el formulario" target="_blank" aria-label="Confirmar asistencia por WhatsApp">
             <button>Confirmar Asistencia</button>
         </a>
     </div>
@@ -390,11 +392,11 @@
     </audio>
 </div>
 
-<a href="https://wa.me/525534127233?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Angy%20y%20René%20💕🎉" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/525534127233?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Angy%20y%20René%20💕🎉. Y ya llene los datos en el formulario" class="whatsapp-float" target="_blank" aria-label="Confirmar asistencia por WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
-<div class="music-toggle" onclick="toggleMusic()">
+<div class="music-toggle" onclick="toggleMusic()" aria-label="Alternar música">
     <div id="musicIcon" style="
         position: fixed;
         bottom: 100px;
