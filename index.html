@@ -193,10 +193,11 @@
 
     .contenedor-invitado {
         position: relative;
-        max-width: 800px;
+        max-width: clamp(900px, 90%, 1200px); /* Mínimo 280px, máximo 800px, se adapta con el 90% */
         margin: 60px auto 40px auto;
-        padding: 0 10px;
+        padding: 0 5vw; /* Padding dinámico según el ancho de pantalla */
         text-align: center;
+        box-sizing: border-box
     }
 
     .contenedor-invitado img {
