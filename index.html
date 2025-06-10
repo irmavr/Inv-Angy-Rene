@@ -172,7 +172,7 @@
     }
 
     .decoracion img {
-        max-width: 400px;
+        max-width: clamp(280px, 80%, 400px);
         margin: 0 auto;
         display: block;
     }
@@ -235,13 +235,11 @@
     }
 	.mensaje-reserva {
 	  padding: 18px 24px;
-	  border-radius: 12px;
 	  text-align: center;
 	  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
 	  max-width: 90%;
 	  margin: 30px auto;
-	  background-color: transparent; /* o elimínalo */
-	}
+	  }
 	
 	.mensaje-reserva h2 {
 	  font-size: clamp(24px, 5vw, 30px);
