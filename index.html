@@ -204,25 +204,23 @@
 			margin: 0 auto;
 		}
 		.texto-sobrepuesto {
-			position: absolute;
-			top: 70%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: #7a7a7a;
-			text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
-			width: 90%;
+		  position: absolute;
+		  bottom: 10%;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  background-color: rgba(255, 255, 255, 0.85);
+		  padding: 10px 20px;
+		  border-radius: 12px;
+		  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 		}
-		.texto-sobrepuesto h1 {
-			font-size: clamp(18px, 3vw, 28px);
-			font-weight: bold;
-			margin: 0;
-		}
+		
 		.texto-sobrepuesto h3 {
-			font-size: clamp(18px, 5vw, 30px);
-			font-weight: bold;
-			margin-bottom: 10px;
+		  font-family: 'Parisienne', cursive;
+		  font-size: clamp(20px, 5vw, 32px);
+		  color: #c76b8c;
+		  margin: 0;
+		  text-align: center;
 		}
-
 		.texto-sobrepuesto p {
 			font-size: 12px;
 			letter-spacing: 1px;
@@ -358,11 +356,15 @@
 			</div>
 			<!--INVITADOS-->
 			<div class="section">
-				<div class="contenedor-invitado" id="invitadoEspecial" style="display: none;">
-					<img src="invitado_especial.png" alt="Invitado Especial">
-				    <div class="texto-sobrepuesto"> <h3 id="nombreInvitado">Nombre del invitado</h3> </div>
-				</div>
-					<h2 class="frase-invitado">¡Tenemos Reservado un Lugar Especial para Ustedes!</h2>
+			  <div class="contenedor-invitado" id="invitadoEspecial" style="display: none; position: relative;">
+			    <img src="invitado_especial.png" alt="Invitado Especial" style="width: 100%; border-radius: 18px;">
+			    
+			    <div class="texto-sobrepuesto">
+			      <h3 id="nombreInvitado">Nombre del invitado</h3>
+			    </div>
+			  </div>
+			
+			  <h2 class="frase-invitado">¡Tenemos Reservado un Lugar Especial para Ustedes!</h2>
 			</div>
 			<!-- *******************-->
 			<div class="section">
