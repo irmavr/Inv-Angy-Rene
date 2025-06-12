@@ -279,6 +279,52 @@
 	  height: 100%;
 	  border: 0;
 	}    
+	.carousel-container {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.carousel-track img {
+  min-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.6);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 2;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255,255,255,0.9);
+}    
     </style>
 </head>
 <body>
@@ -404,7 +450,29 @@
             <button>Confirmar Asistencia</button>
         </a>
     </div>
+<div class="section" id="momentos">
+  <h2 style="
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(26px, 6vw, 42px);
+      color: #c76b8c;
+      margin-bottom: 20px;
+  ">Nuestros Momentos</h2>
 
+  <div class="carousel-container">
+    <button class="carousel-btn prev" aria-label="Anterior">◀️</button>
+    
+    <div class="carousel-track">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+      <img src="foto4.jpg" alt="Foto 4">
+      <img src="foto5.jpg" alt="Foto 5">
+      <img src="foto6.jpg" alt="Foto 6">
+    </div>
+
+    <button class="carousel-btn next" aria-label="Siguiente">▶️</button>
+  </div>
+</div>
     <audio id="bgMusic" loop preload="auto">
         <source src="musica1.mp3" type="audio/mpeg">
         Tu navegador no soporta audio HTML5.
@@ -505,6 +573,23 @@ setInterval(() => {
     `;
 }, 1000);
 </script>
+<script>
+  const track = document.querySelector('.carousel-track');
+  const btnPrev = document.querySelector('.carousel-btn.prev');
+  const btnNext = document.querySelector('.carousel-btn.next');
+  let index = 0;
+
+  btnNext.addEventListener('click', () => {
+    index = (index + 1) % track.children.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  btnPrev.addEventListener('click', () => {
+    index = (index - 1 + track.children.length) % track.children.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  });
+</script>
+	
 <script>
 function getParametro(nombre) {
     const urlParams = new URLSearchParams(window.location.search);
