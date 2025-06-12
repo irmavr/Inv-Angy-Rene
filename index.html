@@ -9,17 +9,23 @@
 	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <style>
-	html {
-         scroll-behavior: smooth;
-        }
-        body {
-        margin: 0;
-        font-family: 'Georgia', serif;
-        background-color: #fff9f9;
-        color: #5e5e5e;
-        overflow-x: hidden;
-    }
-
+       html, body {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden; /* evita desbordamiento lateral */
+          width: 100%;
+          box-sizing: border-box;
+          font-family: 'Georgia', serif;
+          background-color: #fff9f9;
+          color: #5e5e5e;
+          scroll-behavior: smooth;
+      }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+	    
     #mainContent {
         max-width: 960px;
         margin: 0 auto;
@@ -391,22 +397,6 @@
 	      height: 50%;
 		 ">
 	</div>	
-<!--NUESTA CANCIÓN ESPECIAL-->
-	<div class="section">
-	  <h2 style="font-family: 'Parisienne', cursive; font-size: clamp(28px, 6vw, 40px); color: #c76b8c; margin-bottom: 10px;">
-	    Nuestra Canción
-	  </h2>
-	  <div class="video-wrapper">
-	    <iframe src="https://www.youtube.com/embed/kPa7bsKwL-c?autoplay=0&rel=0"
-	      title="Nuestra canción especial: Die With A Smile"
-	      aria-label="Reproductor de video con nuestra canción especial"
-	      frameborder="0"
-	      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-	      allowfullscreen>
-	    </iframe>
-	  </div>
-	</div>	
-<!--*********-->
 	<div class="section">
 	  <img src="asistencia.png" alt="Confirma tu asistencia" style="
 	      width: 100%;
@@ -429,7 +419,22 @@
 <a href="https://wa.me/525534127233?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Angy%20y%20René%20💕🎉. Y ya llene los datos en el formulario" class="whatsapp-float" target="_blank" aria-label="Confirmar asistencia por WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
-
+<!--NUESTA CANCIÓN ESPECIAL-->
+	<div class="section">
+	  <h2 style="font-family: 'Parisienne', cursive; font-size: clamp(28px, 6vw, 40px); color: #c76b8c; margin-bottom: 10px;">
+	    Nuestra Canción
+	  </h2>
+	  <div class="video-wrapper">
+	    <iframe src="https://www.youtube.com/embed/kPa7bsKwL-c?autoplay=0&rel=0"
+	      title="Nuestra canción especial: Die With A Smile"
+	      aria-label="Reproductor de video con nuestra canción especial"
+	      frameborder="0"
+	      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	      allowfullscreen>
+	    </iframe>
+	  </div>
+	</div>	
+<!--*********-->
 <div class="music-toggle" onclick="toggleMusic()" aria-label="Alternar música">
   <div id="musicIcon" style="
       position: fixed;
