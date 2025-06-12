@@ -329,6 +329,27 @@
 		  box-shadow: 0 0 14px rgba(199, 107, 140, 0.4);
 		  background-color: #fde9f0;
 		}
+		.boton-confirmar {
+		  display: inline-block;
+		  background-color: #c76b8c;
+		  color: white;
+		  text-decoration: none;
+		  padding: 14px 28px;
+		  font-size: clamp(18px, 4vw, 22px);
+		  font-family: 'Georgia', serif;
+		  border-radius: 30px;
+		  cursor: pointer;
+		  box-shadow: 0 4px 14px rgba(199, 107, 140, 0.3);
+		  transition: all 0.3s ease;
+		  font-weight: bold;
+		}
+		
+		.boton-confirmar:hover,
+		.boton-confirmar:focus-visible {
+		  background-color: #a65274;
+		  transform: scale(1.05);
+		  box-shadow: 0 6px 20px rgba(199, 107, 140, 0.4);
+		}			
 	</style>
 	</head>
 	<body>
@@ -444,7 +465,7 @@
 			<div class="section">
 			  <img src="confirmacion.png" alt="Confirma tu asistencia" style="width: 100%; max-width: 100%; height: auto;">
 			  <a href="https://wa.me/525534127233?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Angy%20y%20René%20💕🎉.%20Y%20ya%20llene%20los%20datos%20en%20el%20formulario"  
-			     target="_blank" class="enlace-destacado" 
+			     target="_blank"  class="boton-confirmar" 
 			     aria-label="Confirmar asistencia por WhatsApp">
 			    <button>Confirmar Asistencia</button>
 			  </a>
