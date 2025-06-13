@@ -393,6 +393,25 @@
 		  visibility: visible;
 		  opacity: 1;
 		}
+		.boton-formulario {
+		  display: inline-block;
+		  background-color: #f5e9ec;
+		  color: #c76b8c;
+		  font-family: 'Parisienne', cursive;
+		  font-size: clamp(16px, 4vw, 28px);
+		  padding: 12px 24px;
+		  border-radius: 16px;
+		  text-decoration: none;
+		  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+		  transition: all 0.3s ease-in-out;
+		  margin-top: 10px;
+		  margin-bottom: 20px;
+		}
+		
+		.boton-formulario:hover {
+		  background-color: #fddce5;
+		  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+		}
 	</style>
 	</head>
 	<body>
@@ -523,12 +542,37 @@
 			  </a>
 			</div>		
 			<div class="section">
-			  <img src="confirmacion.png" loading="lazy" alt="Confirma tu asistencia" style="width: 100%; max-width: 100%; height: auto;">
-			  <a href="https://wa.me/525534127233?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Angy%20y%20René%20💕🎉.%20Y%20ya%20llene%20los%20datos%20en%20el%20formulario"  
-			     target="_blank"  class="boton-confirmar" 
+			  <!-- Imagen principal de confirmación -->
+			  <img src="confirmacion.png" loading="lazy" alt="Confirma tu asistencia" style="
+			    width: 100%;
+			    max-width: 100%;
+			    height: auto;
+			    border-radius: 18px;
+			    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+			    margin-bottom: 20px;
+			  ">
+			
+			  <!-- Botón de WhatsApp con mensaje personalizado -->
+			  <a href="https://wa.me/525534127233?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Angy%20y%20René%20💕🎉.%20Y%20ya%20llené%20los%20datos%20en%20el%20formulario"  
+			     target="_blank"  
+			     class="boton-formulario" 
 			     aria-label="Confirmar asistencia por WhatsApp">
-			    <button>Confirmar Asistencia</button>
+			    Confirmar Asistencia por WhatsApp
 			  </a>
+			
+			  <!-- Formulario embebido -->
+			  <div style="margin-top: 30px;">
+			    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezOSA-2Sqd8QGKAZa92lbQp-6JWlZDxea3pqmM2qAKNz4LYw/viewform?embedded=true" 
+			            width="100%" 
+			            height="980" 
+			            frameborder="0" 
+			            marginheight="0" 
+			            marginwidth="0" 
+			            loading="lazy"
+			            style="border-radius: 12px;">
+			      Cargando…
+			    </iframe>
+			  </div>
 			</div>
 			<div class="section">
 			  <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51633382" 
