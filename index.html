@@ -350,7 +350,17 @@
 		  background-color: #a65274;
 		  transform: scale(1.05);
 		  box-shadow: 0 6px 20px rgba(199, 107, 140, 0.4);
-		}			
+		}	
+		.fade-in {
+		  opacity: 0;
+		  animation: fadeIn 2s ease-in-out forwards;
+		}
+		
+		@keyframes fadeIn {
+		  to {
+		    opacity: 1;
+		  }
+		}
 	</style>
 	</head>
 	<body>
@@ -382,11 +392,25 @@
 			</div>
 		</div>
 		<div class="content contenedor-principal" id="mainContent" style="display: none;">
-			 <div class="section">
-					<img src="1.gif" loading="lazy" alt="Angy y René" aria-label="Imagen animada de Angy y René" style="	width: 100%; max-width: 800px; height: auto; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 55px auto 20px auto; display: block; ">
-					 <h2 style="font-family: 'Parisienne', cursive; font-size: clamp(14px, 3vw, 32px); color: #c76b8c; margin-bottom: 10px;">
-							  Dios Unió Nuestros Caminos. Ahora Íremos a su Casa para Bendecir Nuestro AMOR💕
-					</h2>
+			<div class="section">
+			  <img src="1.gif" loading="lazy" alt="Angy y René" aria-label="Imagen animada de Angy y René" class="fade-in" style="
+			    width: 100%;
+			    max-width: clamp(300px, 90vw, 800px);
+			    height: auto;
+			    border-radius: 12px;
+			    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+			    margin: 55px auto 20px auto;
+			    display: block;
+			  ">
+			  <h2 style="
+			    font-family: 'Parisienne', cursive;
+			    font-size: clamp(16px, 4vw, 32px);
+			    color: #c76b8c;
+			    margin-bottom: 10px;
+			    text-shadow: 1px 1px 2px #ffffff;
+			  ">
+			    Dios Unió Nuestros Caminos. Ahora Iremos a su Casa para Bendecir Nuestro AMOR 💕
+			  </h2>
 			</div>
 			<div class="section">
 				<div class="decoracion"><img src="decoracion.png" loading="lazy" alt="decoración"></div>
