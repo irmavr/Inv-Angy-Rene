@@ -195,7 +195,6 @@
 			color: #c76b8c;
 			margin-bottom: 10px;
 		}
-
 		.nombre-invitado {
 			font-size: clamp(22px, 4vw, 33px);
 			font-weight: bold;
@@ -203,24 +202,18 @@
 			margin-bottom: 5px;
 		}			
 		.texto-sobrepuesto {
-		  position: absolute;
-		  bottom: 45%;
-		  left: 35%;
-		  transform: translateX(-40%);
 		  background-color: rgba(255, 255, 255, 0.90);
 		  padding: 14px 24px;
 		  border-radius: 14px;
 		  box-shadow: 0 0 12px rgba(199, 107, 140, 0.2)
 		}
 		@media (max-width: 600px) {
-  .texto-sobrepuesto {
-    position: static;
-    transform: none;
-    background-color: rgba(255, 255, 255, 0.95);
-    margin-top: 20px;
-    display: inline-block;
-  }
-}
+		  .texto-sobrepuesto {
+		    background-color: rgba(255, 255, 255, 0.95);
+		    margin-top: 20px;
+		    display: inline-block;
+		  }
+		}
 		.texto-sobrepuesto h3 {
 		  font-family: 'Parisienne', cursive;
 		  font-size: clamp(20px, 5vw, 38px);
@@ -403,11 +396,10 @@
 			<div class="section">
 			  <div class="contenedor-invitado" id="invitadoEspecial" style="display: none; position: relative;">
 			    <img src="invitado.png" alt="Invitado Especial" style="width: 100%; border-radius: 18px;">
-			    
-			    <div class="texto-sobrepuesto">
+			</div> 
+			<div class="texto-sobrepuesto">
 			      <h3 id="nombreInvitado">Nombre del invitado</h3>
-			    </div>
-			  </div>
+			 </div>
 			
 			  <h2 class="frase-invitado">¡Tenemos Reservado un Lugar Especial para Ustedes!</h2>
 			</div>
@@ -480,7 +472,7 @@
 			    <button>Confirmar Asistencia</button>
 			  </a>
 			</div>
-			<div class="section"><br></br>
+			<div class="section">
 			  <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51633382" 
 			     target="_blank" class="enlace-destacado" 
 			     title="Ver Mesa de Regalos Liverpool, gracias"
@@ -510,9 +502,9 @@
 				  allowfullscreen>
 				</iframe>
 			  </div>
-			  <h2 style="font-family: 'Parisienne', cursive; font-size: clamp(18px, 6vw, 34px); color: #c76b8c; margin-bottom: 20px;">
+			  <h2 style="font-family: 'Parisienne', cursive; font-size: clamp(14px, 6vw, 34px); color: #c76b8c; margin-bottom: 20px;">
 				¡El Agradecimiento es la Memoría del Corazón y Tú Siempre Viviras en el Nuestro!
-			  </h2><br>
+			  </h2><br></br>
 			</div>
 		<!--*********-->
 		<div class="music-toggle" onclick="toggleMusic()" aria-label="Alternar música">
