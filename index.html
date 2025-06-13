@@ -361,6 +361,38 @@
 		    opacity: 1;
 		  }
 		}
+                .tooltip-contenedor {
+		  position: relative;
+		  display: inline-block;
+		  text-align: center;
+		}
+		
+		.tooltip-texto {
+		  visibility: hidden;
+		  opacity: 0;
+		  background-color: #f5e9ec;
+		  color: #c76b8c;
+		  font-size: 13px;
+		  padding: 8px 14px;
+		  border-radius: 12px;
+		  position: absolute;
+		  bottom: 110%;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  white-space: normal;
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		  transition: opacity 0.4s ease;
+		  z-index: 100;
+		  max-width: 220px;
+		}
+		
+		/* Mostrar en hover o toque */
+		.tooltip-contenedor:hover .tooltip-texto,
+		.tooltip-contenedor:focus-within .tooltip-texto,
+		.tooltip-contenedor:active .tooltip-texto {
+		  visibility: visible;
+		  opacity: 1;
+		}
 	</style>
 	</head>
 	<body>
@@ -413,7 +445,10 @@
 			  </h2>
 			</div>
 			<div class="section">
-				<div class="decoracion"><img src="decoracion.png" loading="lazy" alt="decoración"></div>
+				<div class="tooltip-contenedor">
+				   <div class="decoracion"><img src="decoracion.png" loading="lazy" alt="decoración"></div>
+				    <span class="tooltip-texto">¡Tócanos para ver todos los detalles: ubicación, regalos, y más 💖!</span>
+				</div>
 				<div id="countdown" class="countdown-box"></div>
 			</div>
 			<!--INVITADOS-->
