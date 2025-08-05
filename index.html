@@ -687,32 +687,53 @@
 			track.style.transform = `translateX(-${index * 100}%)`;
 		  });
 		</script>
-			
 		<script>
-		function getParametro(nombre) {
-			const urlParams = new URLSearchParams(window.location.search);
-			return urlParams.get(nombre);
-		}
+  function getParametro(nombre) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(nombre);
+  }
 
-		async function mostrarInvitado() {
-			const clave = getParametro("invitado");
-			if (!clave) return;
+  async function mostrarInvitado() {
+    const clave = getParametro("invitado");
+    if (!clave) return;
 
-			try {
-				const response = await fetch('invitados.json');
-				const invitados = await response.json();
-				const persona = invitados.find(p => p.clave === clave.toLowerCase());
+    try {
+      const response = await fetch('invitados.json');
+      const invitados = await response.json();
+      const persona = invitados.find(p => p.clave === clave.toLowerCase());
 
-				if (persona) {
-					document.getElementById('invitadoEspecial').style.display = 'block';
-					document.getElementById('nombreInvitado').innerText = persona.nombre + " 💖";
-				}
-			} catch (error) {
-				console.error("Error cargando invitados:", error);
-			}
-		}
+      if (persona) {
+        document.getElementById('invitadoEspecial').style.display = 'block';
+        document.getElementById('nombreInvitado').innerText = persona.nombre + " 💖";
+      } else {
+        mostrarErrorInvitado("Este lugar aún no tiene nombre reservado… pero nos encantaría que estuvieras con nosotros 💍✨");
+      }
+    } catch (error) {
+      console.error("Error cargando invitados:", error);
+      mostrarErrorInvitado("Tuvimos un problemita al cargar tu invitación personalizada. Por favor, intenta más tarde o contáctanos. 📩");
+    }
+  }
 
-		mostrarInvitado();
-		</script>
+  function mostrarErrorInvitado(mensaje) {
+    const contenedor = document.getElementById('invitadoEspecial');
+    contenedor.style.display = 'block';
+    contenedor.innerHTML = `
+      <div style="padding: 25px; background-color: #fff3f7; border-radius: 18px; box-shadow: 0 0 10px rgba(0,0,0,0.08); max-width: 480px; margin: auto;">
+        <h3 style="color: #c76b8c; font-family: 'Parisienne', cursive; font-size: 28px; margin-bottom: 12px;">
+          💌 Invitación personalizada no encontrada
+        </h3>
+        <p style="color: #7a7a7a; font-size: 18px; margin-bottom: 10px;">${mensaje}</p>
+        <p style="font-size: 16px; color: #888;">Verifica tu enlace o escríbenos para ayudarte con mucho gusto ✨</p>
+        <a href="https://wa.me/525534127233?text=Hola,%20no%20puedo%20ver%20mi%20invitación%20personalizada%20para%20la%20boda%20de%20Angy%20y%20René%20👰🏻🤵🏻,%20¿me%20pueden%20ayudar?" 
+           target="_blank" 
+           style="display: inline-block; margin-top: 15px; padding: 12px 20px; background-color: #c76b8c; color: white; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px;">
+          📲 Contactar por WhatsApp
+        </a>
+      </div>
+    `;
+  }
+
+  mostrarInvitado();
+</script>
 	</body>
 </html>
