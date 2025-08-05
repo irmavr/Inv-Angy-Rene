@@ -40,8 +40,6 @@
   { "clave": "cuates", "nombre": "QUERIDOS TÍOS JUAN Y LUIS ROMERO    (3 lugares) "},
   { "clave": "jaime ", "nombre": "QUERIDO TÍO JAIME ROMERO    (2 lugares) "},
   { "clave": "dianita", "nombre": "QUERIDA FAM. VILLEGAS CÓRTES    (6 lugares) "},
-  { "clave": "", "nombre": "    ( lugares) "},
-  { "clave": "", "nombre": "    ( lugares) "},
   { "clave": "angel ", "nombre": "QUERIDA PRIMO ANGEL VILLEGAS    (3 lugares) "},
   { "clave": "tonito", "nombre": "QUERIDO  JOSE ANTONIO VILLEGAS    (4 lugares) "},
   { "clave": "sonia ", "nombre": "QUERIDA PRIMA SONIA VILLEGAS    (2 lugares) "},
@@ -59,3 +57,4 @@
   { "clave": "solis", "nombre": "ESTIMADA FAM. SÓLIS FABIAN    (4 lugares) "},
   { "clave": "ani", "nombre": "ESTIMADOS AMIGOS DE ANA CRIS    (2 lugares) "},
 ]
+
