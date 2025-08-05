@@ -12,7 +12,7 @@
   { "clave": "graciela ", "nombre": "ESTIMADA GRACIELA BECERRA    (2 lugares) "},
   { "clave": "yazmin ", "nombre": "ESTIMADA YAZMIN FLORES    (2 lugares) "},
   { "clave": "arlette ", "nombre": "QUERIDA ARLETTE SERRANO    (2 lugares) "},
-  { "clave": "china", "nombre": "QUERIDA CHINA"    (2 lugares) "},
+  { "clave": "china", "nombre": "QUERIDA CHINA   (2 lugares) "},
   { "clave": "irving ", "nombre": "ESTIMADO IRVING PASTRANA    (2 lugares) "},
   { "clave": "julieta ", "nombre": "ESTIMADA JULIETA HERRERA    (2 lugares) "},
   { "clave": "gerardo ", "nombre": "ESTIMADO GERARDO RODRIGUEZ    (2 lugares) "},
@@ -59,4 +59,5 @@
   { "clave": "solis", "nombre": "ESTIMADA FAM. SÓLIS FABIAN    (4 lugares) "},
   { "clave": "ani", "nombre": "ESTIMADOS AMIGOS DE ANA CRIS    (2 lugares) "},
 ]
+
 
