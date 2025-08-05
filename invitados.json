@@ -8,7 +8,7 @@
   { "clave": "luis", "nombre": "ESTIMADO LUIS RAMIREZ    (4 lugares) "},
   { "clave": "elsa", "nombre": "ESTIMADA FAM. MORA GALLEGOS    (5 lugares) "},
   { "clave": "maria", "nombre": "QUERIDA MA. DE JESUS MARQUEZ    (4 lugares) "},
-  { "clave": "fernando", "nombre": "QUERIDA FERNANDO ARIAS    (2 lugares) "},
+  { "clave": "fernando", "nombre": "QUERIDO FERNANDO ARIAS    (2 lugares) "},
   { "clave": "graciela", "nombre": "ESTIMADA GRACIELA BECERRA    (2 lugares) "},
   { "clave": "yazmin", "nombre": "ESTIMADA YAZMIN FLORES    (2 lugares) "},
   { "clave": "arlette", "nombre": "QUERIDA ARLETTE SERRANO    (2 lugares) "},
@@ -57,3 +57,4 @@
   { "clave": "solis", "nombre": "ESTIMADA FAM. SÓLIS FABIAN    (4 lugares) "},
   { "clave": "ani", "nombre": "ESTIMADOS AMIGOS DE ANA CRIS    (2 lugares) "}
 ]
+
