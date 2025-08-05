@@ -1,5 +1,5 @@
 [
-  { "clave": "irma1", "nombre": "Fam. Sánchez Villegas" },
+  { "clave": "irma1", "nombre": "Fam. Sánchez Villegas     (3 lugares)" },
   { "clave": "laura", "nombre": "QUERIDA LAURA RODRIGUEZ    (2 lugares) "},
   { "clave": "erik", "nombre": "ESTIMADO ERICK SÁNCHEZ    (2 lugares) "},
   { "clave": "oscar", "nombre": "ESTIMADO OSCAR BAUTISTA    (2 lugares) "},
@@ -57,5 +57,6 @@
   { "clave": "solis", "nombre": "ESTIMADA FAM. SÓLIS FABIAN    (4 lugares) "},
   { "clave": "ani", "nombre": "ESTIMADOS AMIGOS DE ANA CRIS    (2 lugares) "}
 ]
+
 
 
